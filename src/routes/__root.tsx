@@ -1,21 +1,25 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+import { useTheme } from '@/hooks/useTheme';
 
 export const Route = createRootRoute({
-  component: () => (
+  component: () => {
+    useTheme();
+
+    return (
     <>
-      <nav className="p-4 flex gap-4 bg-gray-100">
-        <Link to="/" className="[&.active]:font-bold text-blue-600">
+      <nav>
+        <Link to="/">
           Home
         </Link>
-        <Link to="/about" className="[&.active]:font-bold text-blue-600">
+        <Link to="/about">
           About
         </Link>
       </nav>
-      <main className="p-4">
+      <main>
         <Outlet />
       </main>
       <TanStackRouterDevtools position="bottom-right" />
     </>
-  ),
-});
+  );}
+})

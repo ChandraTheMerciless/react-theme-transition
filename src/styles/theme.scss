@@ -1,0 +1,93 @@
+$transition-duration: 0.8s;
+$transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+$transition-properties: (
+    background-color,
+    color,
+    border-color,
+    box-shadow
+);
+
+$theme-home: (
+    bg-primary: #fefefe,
+    bg-secondary: #f8f4f0,
+    bg-accent: #fff8f0,
+    text-primary: #2d2a26,
+    text-secondary: #5c574f,
+    accent: #e07850,
+    accent-hover: #c96840,
+    nav-bg: #f0ebe5,
+    nav-border: #e0d8d0,
+);
+
+$theme-about: (
+    bg-primary: #0f0f14,
+    bg-secondary: #1a1a24,
+    bg-accent: #24243a,
+    text-primary: #f0f0f5,
+    text-secondary: #a0a0b0,
+    accent: #6c8cff,
+    accent-hover: #8ca4ff,
+    nav-bg: #16161e,
+    nav-border: #2a2a3a,
+);
+
+:root {
+    @each $key, $value in $theme-home {
+        --#{$key}: #{$value};
+    }
+
+    color-scheme: light;
+}
+
+html,
+body,
+nav,
+main,
+header,
+footer,
+section,
+article,
+aside,
+div {
+    transition-property: #{$transition-properties};
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-easing;
+}
+
+[data-theme="home"] {
+    @each $key, $value in $theme-home {
+        --#{$key}: #{$value};
+    }
+    
+    color-scheme: light;
+}
+
+[data-theme="about"] {
+    @each $key, $value in $theme-about {
+        --#{$key}: #{$value};
+    }
+
+    color-scheme: dark;
+}
+
+// Base styles
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: var(--accent-hover);
+    }
+}
