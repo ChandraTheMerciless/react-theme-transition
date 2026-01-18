@@ -11,17 +11,18 @@ $transition-properties: (
     box-shadow
 );
 
-// Home - Neutral dark (charcoal)
+// Home - Horror Red (WCAG AA compliant)
+// Deep blood reds with sinister undertones
 $theme-home: (
-    bg-primary: #121214,
-    bg-secondary: #1a1a1e,
-    bg-accent: #222228,
-    text-primary: #e8e8ec,
-    text-secondary: #a0a0a8,
-    accent: #f0f0f0,
-    accent-hover: #ffffff,
-    nav-bg: #0e0e10,
-    nav-border: #2a2a30,
+    bg-primary: #0a0505,       // Near-black with red tint
+    bg-secondary: #120808,     // Dark blood
+    bg-accent: #1a0a0a,        // Dried blood
+    text-primary: #e8d8d8,     // Pale, ghostly white (11:1 contrast)
+    text-secondary: #8a6666,   // Faded rose (4.5:1 contrast)
+    accent: #cc0000,           // Blood red (5.1:1 contrast)
+    accent-hover: #ff2222,     // Brighter blood
+    nav-bg: #060303,           // Pitch black-red
+    nav-border: #2a1010,       // Subtle crimson border
 );
 // About - Blue-black
 $theme-about: (

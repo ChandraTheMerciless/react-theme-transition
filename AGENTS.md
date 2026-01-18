@@ -2,19 +2,9 @@
 
 ## User Preferences
 
-- **Do NOT auto-generate code in the project** — provide instructions and code snippets so the user can create files themselves (learning-focused workflow)
+- **Always ask for permission before making code changes** — present the proposed changes first and wait for approval
 - Explain the "why" behind decisions, not just the "what"
 - When presenting options, include trade-off comparisons
-
----
-
-## Code Formatting
-
-After editing any `.ts`, `.tsx`, `.js`, `.jsx`, `.json`, `.css`, or `.scss` file, run Prettier to format it:
-
-```bash
-npx prettier --write <file_path>
-```
 
 ---
 

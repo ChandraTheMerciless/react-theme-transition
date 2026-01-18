@@ -4,12 +4,16 @@ nav {
     display: flex;
     gap: variables.$space-sm;
     justify-content: center;
+    padding: variables.$space-lg;
 
     a {
         padding: variables.$space-sm;
+        text-shadow: 0 0 0 transparent;  // Initial state for transition
+        transition: text-shadow 0.3s ease;
 
         &:hover {
             text-decoration: underline;
+            text-shadow: 0 0 8px var(--accent), 0 0 20px var(--accent);
         }
     }
 }
