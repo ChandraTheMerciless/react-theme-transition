@@ -3,7 +3,10 @@ import { useLocation } from '@tanstack/react-router';
 
 const routeThemeMap: Record<string, string> = {
     '/': 'home',
-    '/about': 'about'
+    '/about': 'about',
+        '/blog': 'blog',
+    '/contact': 'contact',
+    '/projects': 'projects',
 };
 
 export function useTheme(): string {

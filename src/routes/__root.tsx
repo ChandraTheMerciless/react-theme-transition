@@ -1,6 +1,7 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { useTheme } from '@/hooks/useTheme';
+import Navbar from '@/components/layout/Navbar';
 
 export const Route = createRootRoute({
   component: () => {
@@ -8,14 +9,7 @@ export const Route = createRootRoute({
 
     return (
     <>
-      <nav>
-        <Link to="/">
-          Home
-        </Link>
-        <Link to="/about">
-          About
-        </Link>
-      </nav>
+      <Navbar />
       <main>
         <Outlet />
       </main>

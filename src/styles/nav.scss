@@ -1,0 +1,15 @@
+@use '@/styles/variables';
+
+nav {
+    display: flex;
+    gap: variables.$space-sm;
+    justify-content: center;
+
+    a {
+        padding: variables.$space-sm;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
